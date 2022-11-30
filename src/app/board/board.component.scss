@@ -1,0 +1,16 @@
+.player {
+    color: #5e76d6;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.main {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 0px;
+}
+
+app-square {
+    border: 1px gray solid;
+    height: 200px;
+}
