@@ -20,6 +20,7 @@
   <app-square
     *ngFor="let val of squares; let i = index"
     [value]="val"
+    [isPlay]="isPlay"
     (click)="makeMove(i)"
   >
   </app-square>

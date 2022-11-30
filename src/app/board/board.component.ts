@@ -12,6 +12,7 @@ export class BoardComponent implements OnInit {
   winner: string | null = "";
   winnerOCount = 0;
   winnerXCount = 0;
+  isPlay: boolean = true;
 
   constructor() { }
 
@@ -23,6 +24,7 @@ export class BoardComponent implements OnInit {
     this.squares = Array(9).fill(null);
     this.winner = null;
     this.xIsNext = true;
+    this.isPlay = true;
   }
   get player() {
     return this.xIsNext ? 'O' : 'X';
@@ -56,7 +58,8 @@ export class BoardComponent implements OnInit {
         this.squares[a] === this.squares[b] &&
         this.squares[a] === this.squares[c]
       ) {
-        Swal.fire(`Player ${this.squares[a]} won the game`, 'You can start new game!', 'success')
+        Swal.fire(`Player ${this.squares[a]} won the game`, 'You can start new game!', 'success');
+        this.isPlay = false;
         return this.squares[a];
       }
     }

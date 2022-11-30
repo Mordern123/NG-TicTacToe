@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SquareComponent implements OnInit {
 
-  @Input()
-  value!: 'O' | 'X';
+  @Input() value!: 'O' | 'X';
+  @Input() isPlay!: boolean;
 
   constructor() { }
 
